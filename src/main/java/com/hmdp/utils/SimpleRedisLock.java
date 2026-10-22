@@ -33,6 +33,8 @@ public class SimpleRedisLock implements ILock {
         return Boolean.TRUE.equals(success);
     }
 
+
+    // TODO 还有使用lua脚本的方式来解锁，保证原子性。但目前无法下载emmylua2，所以暂时搁置
     @Override
     public void unlock() {
         // 获取当前线程的id
